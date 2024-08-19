@@ -11,7 +11,6 @@ This project is a secure request processing system that simulates interactions b
 - SQLite for storing request metadata and status
 - Detailed logging with log retrieval endpoint
 - Dockerized for easy deployment
-- Simple web interface built with React
 
 ## Prerequisites
 
