@@ -2,10 +2,10 @@ import aiohttp
 import asyncio
 import time
 
-AUTH_TOKEN = "nader1234"
+from config import LOAD_TEST_API_URL, SECRET_TOKEN
+
 NUM_REQUESTS = 1000  # Number of concurrent requests
 CONCURRENT_REQUESTS = 50  # Number of requests to send concurrently
-API_URL = "https://localhost:5000/submit-request"
 TASK_DATA = {"task": "Classify this image"}
 
 
@@ -17,13 +17,13 @@ async def send_request(session, url, headers, data):
 async def load_test():
     headers = {
         "Content-Type": "application/json",
-        "Authorization": f"Bearer {AUTH_TOKEN}",
+        "Authorization": f"Bearer {SECRET_TOKEN}",
     }
 
     async with aiohttp.ClientSession() as session:
         tasks = []
         for _ in range(NUM_REQUESTS):
-            task = send_request(session, API_URL, headers, TASK_DATA)
+            task = send_request(session, LOAD_TEST_API_URL, headers, TASK_DATA)
             tasks.append(task)
 
             if len(tasks) >= CONCURRENT_REQUESTS:

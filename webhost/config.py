@@ -14,6 +14,7 @@ RABBITMQ_PORT = os.getenv("RABBITMQ_PORT", "5672")
 RABBITMQ_USER = os.getenv("RABBITMQ_USER", "guest")
 RABBITMQ_PASSWORD = os.getenv("RABBITMQ_PASSWORD", "guest")
 WEB_HOST_URL = os.getenv("WEB_HOST_URL", "http://localhost:5000")
+LOAD_TEST_API_URL = os.getenv("LOAD_TEST_API_URL", "https://localhost:5000/submit-request")
 
 
 # Logging configuration
