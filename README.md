@@ -75,10 +75,6 @@ python .\webhost\load_test.py
 - **Body:** JSON containing the task (e.g., `{"task": "Sample task"}`).
 - **Response:** JSON with the request ID.
 
-### `/fetch-requests`
-
-- **Method:** `GET`
-- **Description:** Fetches the latest queued request for processing by the deep learning server.
 
 ### `/submit-result`
 
