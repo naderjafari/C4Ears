@@ -32,7 +32,15 @@ cd deep-learning-microservice
 
 ### 2. Set Up Environment Variables
 
-Edit and change .env file.
+Create a .env file in the project root directory with the following content:
+
+```bash
+SECRET_TOKEN=mysecret123456
+DATABASE_URL=sqlite:///app.db
+RABBITMQ_HOST=rabbitmq
+WEB_HOST_URL=https://webhost:5000
+LOAD_TEST_API_URL=https://localhost:5000/submit-request
+```
 
 
 ### 3. Build and Start Services
